@@ -1,24 +1,49 @@
+
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Translator API
 
-Things you may want to cover:
+Backend API only Rails application to entertain glossary, terms and highlighting them in given text
 
-* Ruby version
+### Development Setup
+- Ruby version 2.7.1
+- Rails version 7.0.3
+### System Level Dependencies:
+- PostgreSQL 14.2
+### Project Level Dependencies
+```
+bundle install
+```
+### Setting up the Database
+```
+rails db:create
+```
+```
+rails db:migrate
+```
+```
+rails db:seed
+```
+### Start the Rails Server
+```
+rails server
+```
+### Running Tests
+```
+bundle exec rspec --format documentation
+```
+## Setting up the Project in Dockerized Environment
+- Docker should be installed on system. Then run following commands:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+docker-compose build
+```
+```
+docker-compose up -d
+```
+```
+docker exec -it translator-api_web_1 bundle exec rails db:setup
+```
+```
+docker exec -it translator-api_web_1 bundle exec rails db:migrate
+```
