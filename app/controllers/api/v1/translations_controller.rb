@@ -3,6 +3,8 @@
 module Api
   module V1
     class TranslationsController < BaseController
+      actions :show
+      
       def create
         translation = Translations::Creation.new(params).execute
 

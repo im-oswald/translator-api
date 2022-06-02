@@ -2,13 +2,22 @@ development:
   DB_USERNAME: ''
   DB_PASSWORD: ''
   LANGUAGE_CODE_FILE_PATH: ''
+  API_AUTH_TOKEN: ''
+
+test:
+  DB_USERNAME: ''
+  DB_PASSWORD: ''
+  LANGUAGE_CODE_FILE_PATH: ''
+  API_AUTH_TOKEN: ''
 
 staging:
   DB_USERNAME: ''
   DB_PASSWORD: ''
   LANGUAGE_CODE_FILE_PATH: ''
+  API_AUTH_TOKEN: ''
 
 production:
   DB_USERNAME: ''
   DB_PASSWORD: ''
   LANGUAGE_CODE_FILE_PATH: ''
+  API_AUTH_TOKEN: ''

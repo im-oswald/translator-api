@@ -28,6 +28,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore all .keep files
+**.keep
+
 # Ignore environment variables
 /config/application.yml
 
@@ -38,4 +41,7 @@ dump.rdb
 
 # Ignore byebug history
 /.byebug_history
+
+# Ignore spec history
+/.rspec
 

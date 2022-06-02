@@ -7,6 +7,7 @@ module Api
 
       include BaseHandler
       include SerializerHandler
+      include ExceptionHandler
 
       def index
         raise ActiveRecord::RecordNotFound, controller_name.camelize.singularize if collection.dig(:records).blank?
@@ -85,7 +86,8 @@ module Api
       end
     
       def api_key
-        request.headers['API-Auth-Token'].eql?('testing')
+        # TODO: integrate devise_token_auth gem for authorization
+        request.headers['API-Auth-Token'].eql?(ENV['API_AUTH_TOKEN'])
       end
     end
   end

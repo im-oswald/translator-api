@@ -17,13 +17,13 @@ class Translation < ApplicationRecord
   def validate_source_language_code
     return if source_language_matches?
 
-    errors.add(:base, I18n.t('translation.error.not_matched', field: 'source_language_code'))
+    errors.add(:base, I18n.t('translation.errors.not_matched', field: 'source_language_code'))
   end
 
   def validate_destination_language_code
     return if target_language_matches?
 
-    errors.add(:base, I18n.t('translation.error.not_matched', field: 'target_language_code'))
+    errors.add(:base, I18n.t('translation.errors.not_matched', field: 'target_language_code'))
   end
 
   def source_language_matches?

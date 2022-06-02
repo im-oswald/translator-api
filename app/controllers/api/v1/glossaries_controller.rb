@@ -3,6 +3,8 @@
 module Api
   module V1
     class GlossariesController < BaseController
+      actions :index, :show, :create
+      
       private
 
       def permitted_params
