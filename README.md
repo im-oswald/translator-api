@@ -14,6 +14,15 @@ Backend API only Rails application to entertain glossary, terms and highlighting
 ```
 bundle install
 ```
+### Setting up the Environmental Variables
+Copy .env.example file incase of Dockerized setup or config/application.example.yml in case of local environment and set the values accordingly:
+```
+cp .env.example .env
+```
+OR
+```
+cp config/application.example.yml config/application.yml
+```
 ### Setting up the Database
 ```
 rails db:create
