@@ -1,0 +1,6 @@
+en:
+  glossary:
+    errors:
+      not_given: '%{field} is not given'
+      not_valid: '%{field} is not a valid ISO 639-1 code'
+

@@ -1,0 +1,14 @@
+development:
+  DB_USERNAME: ''
+  DB_PASSWORD: ''
+  LANGUAGE_CODE_FILE_PATH: ''
+
+staging:
+  DB_USERNAME: ''
+  DB_PASSWORD: ''
+  LANGUAGE_CODE_FILE_PATH: ''
+
+production:
+  DB_USERNAME: ''
+  DB_PASSWORD: ''
+  LANGUAGE_CODE_FILE_PATH: ''

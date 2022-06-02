@@ -1,0 +1,4 @@
+en:
+  translation:
+    errors:
+      not_matched: '%{field} does not matches with glossary'

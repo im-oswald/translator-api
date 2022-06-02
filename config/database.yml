@@ -1,0 +1,28 @@
+default: &default
+  adapter:  postgresql
+  host:     <%= ENV['DB_HOST'] || 'localhost' %>
+  port:     <%= ENV['DB_PORT'] || 5432 %>
+  pool:     <%= ENV['DB_POOL'] || 5 %>
+  encoding: unicode
+  username: <%= ENV['DB_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DB_PASSWORD'] || 'postgres' %>
+  sslmode: disable
+
+development:
+  <<: *default
+  database: translator_api_development
+test:
+  <<: *default
+  database: translator_api_test
+staging:
+  <<: *default
+  database: <%= ENV['DB_NAME'] || 'translator_api_staging' %>
+sandbox:
+  <<: *default
+  database: <%= ENV['DB_NAME'] || 'translator_api_sandbox' %>
+preprod:
+  <<: *default
+  database: <%= ENV['DB_NAME'] || 'translator_api_preprod' %>
+production:
+  <<: *default
+  database: <%= ENV['DB_NAME'] || 'translator_api_production' %>
