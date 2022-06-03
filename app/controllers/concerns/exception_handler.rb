@@ -9,6 +9,8 @@ module ExceptionHandler
 
   class CollectionNotFound < StandardError; end
 
+  class RecordNotFound < ActiveRecord::RecordNotFound; end
+
   included do
     rescue_from ActiveRecord::ReadOnlyRecord do |_e|
       render json: { message: I18n.t('application.exceptions.read_only_record') }, status: :forbidden

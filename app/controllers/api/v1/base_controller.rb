@@ -10,7 +10,7 @@ module Api
       include ExceptionHandler
 
       def index
-        raise ActiveRecord::RecordNotFound, controller_name.camelize.singularize if collection.dig(:records).blank?
+        raise RecordNotFound, controller_name.camelize.singularize if collection.dig(:records).blank?
 
         render json: serialized_resources
       end
